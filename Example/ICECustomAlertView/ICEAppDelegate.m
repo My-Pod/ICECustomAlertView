@@ -7,11 +7,21 @@
 //
 
 #import "ICEAppDelegate.h"
+#import "ICEViewController.h"
+
 
 @implementation ICEAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor lightGrayColor];
+    [self.window makeKeyAndVisible];
+    
+    ICEViewController *vc = [[ICEViewController alloc] init];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = navi;
+    
     // Override point for customization after application launch.
     return YES;
 }
