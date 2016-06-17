@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A7CD3F90051C027816E4FABEDB4A1FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		0CF6EEFA0A528D8C6DC8AFBB9F55AED8 /* Pods-ICECustomAlertView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FAC7F0E03CB32517EEB4D5E5C1B77395 /* Pods-ICECustomAlertView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E1D5D86EC6B6094A7D55BD0FFE3A89D /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = F683E48581C161AB79D96A3DBD3C866B /* ReplaceMe.m */; };
-		62A9EF34F70ECB9E6206575F4328E00A /* ICECustomAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E898BCD722F550189D4E0776CE62B3A2 /* ICECustomAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35481168D55F383C235D8084C24EC062 /* ICECustomAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BF1D00B4D92FED62993B6C9EE4BE575 /* ICECustomAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65F1A4F7D9F79E9C742933DC6E12F1CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		722E1A8D7B0907BDE29EEC4340829720 /* Pods-ICECustomAlertView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2941E73680BA8EE50B667413768464B /* Pods-ICECustomAlertView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C36A97214733D7E6DCB351BFB2E2258 /* ICECustomAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6923AC17B8F60996BBB97957D795DF88 /* ICECustomAlertView-dummy.m */; };
 		7F71685D1C81B2C068DC44582DFA6280 /* Pods-ICECustomAlertView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4CE564F33F0C9C223A961BF56109AE /* Pods-ICECustomAlertView_Example-dummy.m */; };
-		8951F8AC62DBED55D86ACB1178433757 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		ABA90ABD0EE2ACB7FF71684A3FB543DD /* ICECustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49218A570C0FB3FEEFFEB1C3B77BC45A /* ICECustomAlertView.m */; };
 		ABB9722A95F1EBAF2B6AF303B17845A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		B6CBF944EEEC60EE0C508DD0C5D06C24 /* ICECustomAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6923AC17B8F60996BBB97957D795DF88 /* ICECustomAlertView-dummy.m */; };
+		BF4F027BCF92EA8910B41C8CB454F097 /* ICECustomAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E898BCD722F550189D4E0776CE62B3A2 /* ICECustomAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E06A960A44F1BB535E59285517344B4C /* Pods-ICECustomAlertView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 886FA7931BE8B120548FEDAB9D192355 /* Pods-ICECustomAlertView_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +25,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 07226606ECC9EE1F362DA8F00FE798BF;
+			remoteGlobalIDString = 14DBB2F0884A560FCAA737FF5EE03D3F;
 			remoteInfo = ICECustomAlertView;
 		};
 /* End PBXContainerItemProxy section */
@@ -33,10 +34,12 @@
 		124412093DCA0F09094D58F13D7462E2 /* Pods-ICECustomAlertView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ICECustomAlertView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		203B1D5E4B4D3F38016FEE7F5D2A6A4B /* Pods_ICECustomAlertView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ICECustomAlertView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		242196265E2F6B3951100EE8B820F3DB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BF1D00B4D92FED62993B6C9EE4BE575 /* ICECustomAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ICECustomAlertView.h; sourceTree = "<group>"; };
 		36F8863105581DFABBF5911D13AC33C7 /* Pods-ICECustomAlertView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ICECustomAlertView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		384130E6E7EDA1F901085BAA891130B1 /* Pods-ICECustomAlertView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ICECustomAlertView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3B9C266550D8EADFF74F2C1BA5DD7B75 /* Pods-ICECustomAlertView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ICECustomAlertView_Example-resources.sh"; sourceTree = "<group>"; };
 		469A5BC1B614ED871AA8DD6494C06BAC /* Pods-ICECustomAlertView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ICECustomAlertView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		49218A570C0FB3FEEFFEB1C3B77BC45A /* ICECustomAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ICECustomAlertView.m; sourceTree = "<group>"; };
 		542ACE4FD52A512AA04EA709D6F871EC /* Pods-ICECustomAlertView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ICECustomAlertView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5D4CE564F33F0C9C223A961BF56109AE /* Pods-ICECustomAlertView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ICECustomAlertView_Example-dummy.m"; sourceTree = "<group>"; };
 		6923AC17B8F60996BBB97957D795DF88 /* ICECustomAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ICECustomAlertView-dummy.m"; sourceTree = "<group>"; };
@@ -59,7 +62,6 @@
 		E898BCD722F550189D4E0776CE62B3A2 /* ICECustomAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ICECustomAlertView-umbrella.h"; sourceTree = "<group>"; };
 		F470F73121DD113E07C772829E97077B /* Pods-ICECustomAlertView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ICECustomAlertView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		F4FD41F3E51982FBACAEFCE268472624 /* ICECustomAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ICECustomAlertView.xcconfig; sourceTree = "<group>"; };
-		F683E48581C161AB79D96A3DBD3C866B /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
 		FAC7F0E03CB32517EEB4D5E5C1B77395 /* Pods-ICECustomAlertView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ICECustomAlertView_Tests-umbrella.h"; sourceTree = "<group>"; };
 		FF745529C575BD0327F2669197726BCF /* Pods_ICECustomAlertView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ICECustomAlertView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -73,11 +75,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		19FCB787296361421A67CD4AC9D1C981 /* Frameworks */ = {
+		53A0744E6385CDCBD162BC7E4844C91A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8951F8AC62DBED55D86ACB1178433757 /* Foundation.framework in Frameworks */,
+				0A7CD3F90051C027816E4FABEDB4A1FC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +132,7 @@
 		3E78AEFB284769E5CEF5A91F4CC530C7 /* ICECustomAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				68CBBDD19924BAF26E56D6D3AF685677 /* ICECustomAlertView */,
+				723F44F5CFFB4635809CCACB57FAF5D2 /* ICECustomAlertView */,
 				DE73D5CDEF0B1DC9F5AB6CF30B16B18C /* Support Files */,
 			);
 			name = ICECustomAlertView;
@@ -145,20 +147,12 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		68CBBDD19924BAF26E56D6D3AF685677 /* ICECustomAlertView */ = {
+		723F44F5CFFB4635809CCACB57FAF5D2 /* ICECustomAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				6C778D5817AE9E33A87890B7A85EF0C4 /* Classes */,
+				9AD0E7F22F6CC058A3867F94D1A71A80 /* Classes */,
 			);
 			path = ICECustomAlertView;
-			sourceTree = "<group>";
-		};
-		6C778D5817AE9E33A87890B7A85EF0C4 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				F683E48581C161AB79D96A3DBD3C866B /* ReplaceMe.m */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -180,6 +174,15 @@
 				203B1D5E4B4D3F38016FEE7F5D2A6A4B /* Pods_ICECustomAlertView_Tests.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9AD0E7F22F6CC058A3867F94D1A71A80 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2BF1D00B4D92FED62993B6C9EE4BE575 /* ICECustomAlertView.h */,
+				49218A570C0FB3FEEFFEB1C3B77BC45A /* ICECustomAlertView.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		9E1C277D8AACAB81BF1405F631A22E92 /* Pods-ICECustomAlertView_Example */ = {
@@ -233,11 +236,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AEB022FBF3FF02F216321D2DAC44FB34 /* Headers */ = {
+		4D5DCD58D97EC6ADA3C18B8528444EEC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62A9EF34F70ECB9E6206575F4328E00A /* ICECustomAlertView-umbrella.h in Headers */,
+				BF4F027BCF92EA8910B41C8CB454F097 /* ICECustomAlertView-umbrella.h in Headers */,
+				35481168D55F383C235D8084C24EC062 /* ICECustomAlertView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,13 +256,13 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		07226606ECC9EE1F362DA8F00FE798BF /* ICECustomAlertView */ = {
+		14DBB2F0884A560FCAA737FF5EE03D3F /* ICECustomAlertView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A306617DE4C9C8E6F76B5ECC1F666882 /* Build configuration list for PBXNativeTarget "ICECustomAlertView" */;
+			buildConfigurationList = 7EF76064111C0594736696D8DCA79F5D /* Build configuration list for PBXNativeTarget "ICECustomAlertView" */;
 			buildPhases = (
-				F02E09D3DD4C07EBDE8CFEE88373E990 /* Sources */,
-				19FCB787296361421A67CD4AC9D1C981 /* Frameworks */,
-				AEB022FBF3FF02F216321D2DAC44FB34 /* Headers */,
+				BEB24FA4DB89C93DF15BCB62C70451D5 /* Sources */,
+				53A0744E6385CDCBD162BC7E4844C91A /* Frameworks */,
+				4D5DCD58D97EC6ADA3C18B8528444EEC /* Headers */,
 			);
 			buildRules = (
 			);
@@ -325,7 +329,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				07226606ECC9EE1F362DA8F00FE798BF /* ICECustomAlertView */,
+				14DBB2F0884A560FCAA737FF5EE03D3F /* ICECustomAlertView */,
 				BC50981650655310C0F4F0982B8F5C50 /* Pods-ICECustomAlertView_Example */,
 				436CCD6D411568962DB40E68D5A222C9 /* Pods-ICECustomAlertView_Tests */,
 			);
@@ -349,12 +353,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F02E09D3DD4C07EBDE8CFEE88373E990 /* Sources */ = {
+		BEB24FA4DB89C93DF15BCB62C70451D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6CBF944EEEC60EE0C508DD0C5D06C24 /* ICECustomAlertView-dummy.m in Sources */,
-				4E1D5D86EC6B6094A7D55BD0FFE3A89D /* ReplaceMe.m in Sources */,
+				7C36A97214733D7E6DCB351BFB2E2258 /* ICECustomAlertView-dummy.m in Sources */,
+				ABA90ABD0EE2ACB7FF71684A3FB543DD /* ICECustomAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +368,7 @@
 		57CE2D33C04D7398424BC250DD26A9EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ICECustomAlertView;
-			target = 07226606ECC9EE1F362DA8F00FE798BF /* ICECustomAlertView */;
+			target = 14DBB2F0884A560FCAA737FF5EE03D3F /* ICECustomAlertView */;
 			targetProxy = 50DD0DCA3C27558A8C741408423D1B59 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -441,7 +445,36 @@
 			};
 			name = Debug;
 		};
-		9E02DBC252FDAFA25702B4B6A0FECB6C /* Debug */ = {
+		50A8CDA28076F1391937D5E5781756D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4FD41F3E51982FBACAEFCE268472624 /* ICECustomAlertView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ICECustomAlertView/ICECustomAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ICECustomAlertView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ICECustomAlertView/ICECustomAlertView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ICECustomAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		521772BD3CAEE55B323B2CCC321BE285 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F4FD41F3E51982FBACAEFCE268472624 /* ICECustomAlertView.xcconfig */;
 			buildSettings = {
@@ -495,35 +528,6 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_ICECustomAlertView_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B72F365493122ACE8BA104D3EB448CBA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4FD41F3E51982FBACAEFCE268472624 /* ICECustomAlertView.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ICECustomAlertView/ICECustomAlertView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ICECustomAlertView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ICECustomAlertView/ICECustomAlertView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ICECustomAlertView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -652,11 +656,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A306617DE4C9C8E6F76B5ECC1F666882 /* Build configuration list for PBXNativeTarget "ICECustomAlertView" */ = {
+		7EF76064111C0594736696D8DCA79F5D /* Build configuration list for PBXNativeTarget "ICECustomAlertView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9E02DBC252FDAFA25702B4B6A0FECB6C /* Debug */,
-				B72F365493122ACE8BA104D3EB448CBA /* Release */,
+				521772BD3CAEE55B323B2CCC321BE285 /* Debug */,
+				50A8CDA28076F1391937D5E5781756D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

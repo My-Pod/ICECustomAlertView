@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1755C50C1D14049500C4E632 /* ICEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755C50B1D14049500C4E632 /* ICEViewController.m */; };
 		5313DEC77FDEAEA4A9479914 /* Pods_ICECustomAlertView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1892AAA58F298A4DFEDACB90 /* Pods_ICECustomAlertView_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -14,7 +15,6 @@
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* ICEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* ICEAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* ICEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* ICEViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -36,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1755C50A1D14049500C4E632 /* ICEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICEViewController.h; sourceTree = "<group>"; };
+		1755C50B1D14049500C4E632 /* ICEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICEViewController.m; sourceTree = "<group>"; };
 		1892AAA58F298A4DFEDACB90 /* Pods_ICECustomAlertView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ICECustomAlertView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C76DDBAB51D4B23CD7E877A /* Pods-ICECustomAlertView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ICECustomAlertView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ICECustomAlertView_Example/Pods-ICECustomAlertView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3FC8A66B14D9A7FCE8C99AAC /* Pods_ICECustomAlertView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ICECustomAlertView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,8 +52,6 @@
 		6003F59B195388D20070C39A /* ICECustomAlertView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ICECustomAlertView-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* ICEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* ICEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICEAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* ICEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICEViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* ICEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICEViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* ICECustomAlertView_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ICECustomAlertView_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -132,9 +132,9 @@
 			children = (
 				6003F59C195388D20070C39A /* ICEAppDelegate.h */,
 				6003F59D195388D20070C39A /* ICEAppDelegate.m */,
+				1755C50A1D14049500C4E632 /* ICEViewController.h */,
+				1755C50B1D14049500C4E632 /* ICEViewController.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* ICEViewController.h */,
-				6003F5A6195388D20070C39A /* ICEViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -391,8 +391,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* ICEAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* ICEViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				1755C50C1D14049500C4E632 /* ICEViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

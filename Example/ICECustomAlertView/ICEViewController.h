@@ -1,12 +1,12 @@
 //
 //  ICEViewController.h
-//  ICECustomAlertView
+//  AlertViewTexst
 //
-//  Created by gumengxiao on 06/17/2016.
-//  Copyright (c) 2016 gumengxiao. All rights reserved.
+//  Created by WLY on 16/6/17.
+//  Copyright © 2016年 ICE. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface ICEViewController : UIViewController
 
