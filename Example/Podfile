@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ICECustomAlertView_Example' do
+  pod 'ICECustomAlertView', :path => '../'
+
+  target 'ICECustomAlertView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
