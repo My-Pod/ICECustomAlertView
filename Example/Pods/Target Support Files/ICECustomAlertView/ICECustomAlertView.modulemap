@@ -1,0 +1,6 @@
+framework module ICECustomAlertView {
+  umbrella header "ICECustomAlertView-umbrella.h"
+
+  export *
+  module * { export * }
+}

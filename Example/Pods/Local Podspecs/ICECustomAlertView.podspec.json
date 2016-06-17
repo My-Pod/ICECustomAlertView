@@ -1,0 +1,22 @@
+{
+  "name": "ICECustomAlertView",
+  "version": "0.1.0",
+  "summary": "A short description of ICECustomAlertView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/ICECustomAlertView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "gumengxiao": "rare_ice@163.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/ICECustomAlertView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ICECustomAlertView/Classes/**/*"
+}

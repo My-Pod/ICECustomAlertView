@@ -1,0 +1,16 @@
+PODS:
+  - ICECustomAlertView (0.1.0)
+
+DEPENDENCIES:
+  - ICECustomAlertView (from `../`)
+
+EXTERNAL SOURCES:
+  ICECustomAlertView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ICECustomAlertView: 052f4ca61f33ce2fdbb439fb905f60f856145ff6
+
+PODFILE CHECKSUM: fff86421027f9e4fd5e933bf1f744a3c183d81ac
+
+COCOAPODS: 1.0.1

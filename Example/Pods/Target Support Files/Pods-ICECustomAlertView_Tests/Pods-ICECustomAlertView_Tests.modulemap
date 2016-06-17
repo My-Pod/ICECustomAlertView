@@ -1,0 +1,6 @@
+framework module Pods_ICECustomAlertView_Tests {
+  umbrella header "Pods-ICECustomAlertView_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

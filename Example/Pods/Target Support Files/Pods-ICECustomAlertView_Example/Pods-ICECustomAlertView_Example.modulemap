@@ -1,0 +1,6 @@
+framework module Pods_ICECustomAlertView_Example {
+  umbrella header "Pods-ICECustomAlertView_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
