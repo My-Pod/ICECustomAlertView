@@ -27,12 +27,19 @@ const static CGFloat   ICEFontSize_Btn      = 16; //btn 字体大小
 
 #define ICESCREEN_W  CGRectGetWidth([UIScreen mainScreen].bounds) //屏幕宽度
 #define ICESCREEN_H  CGRectGetHeight([UIScreen mainScreen].bounds) //屏幕高度
-#define ICEAlertView_H MAX(ICESCREEN_H, ICESCREEN_W) / 4 //最大高度
-#define ICEAlertView_W MIN(ICESCREEN_W, ICESCREEN_H) / 1.5 //宽度
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) //当前设备类型
+
+
+
+#define ICEAlertView_W_Ratio  (IS_IPAD ? 3 : 1.5)
+#define ICEAlertView_H (MAX(ICESCREEN_H, ICESCREEN_W) / 3.5) //最大高度
+#define ICEAlertView_W (MIN(ICESCREEN_W, ICESCREEN_H) / ICEAlertView_W_Ratio) //宽度
 #define ICEContent_W   (ICEAlertView_W - 2 * ICE_Spacing) // 内容区域宽度
 
 #define ICEDefaultRect CGRectMake(0, 0, ICEAlertView_W, ICEAlertView_H) //警告视图的默认大小
 #define ICEScreen_Center  CGPointMake(ICESCREEN_W / 2, ICESCREEN_H / 2); //屏幕中心点
+
+
 
 /**
  *  计算文本高度
@@ -43,12 +50,7 @@ CGFloat getStringHeight(NSString *string, UIFont *font) {
 }
 
 
-@interface ICECustomAlertView ()<UIGestureRecognizerDelegate>{
-    
-    NSString *_key;
-}
-
-
+@interface ICECustomAlertView ()<UIGestureRecognizerDelegate>
 
 /**
  *  容器视图
@@ -63,6 +65,10 @@ CGFloat getStringHeight(NSString *string, UIFont *font) {
  */
 @property (nonatomic, copy) ICEAlertViewCompletionBlock completion;
 
+/**
+ *  引入保留环
+ */
+@property(nonnull, copy) id (^retaionBlock) ();
 
 //要推出一个视图1. 创建一个要推出的视图,并加载到指定位置.
 //使用动画推出要显示的视图
@@ -79,22 +85,23 @@ CGFloat getStringHeight(NSString *string, UIFont *font) {
  */
 + (void)alertViewWithCustomView:(UIView *)customView{
 
-    ICECustomAlertView *alertView = [[ICECustomAlertView alloc] init];
-    
-    if (CGRectGetHeight(customView.bounds) > 0) {
-
-        CGRect bounds = CGRectMake(0, 0, customView.bounds.size.width + ICE_CornerRadius * 2, customView.bounds.size.height + ICE_CornerRadius * 2);
-        alertView.containerView.bounds = bounds;
-        alertView.containerView.center = ICEScreen_Center;
-        customView.center = CGPointMake(alertView.containerView.bounds.size.width / 2, alertView.containerView.bounds.size.height / 2);
-
-    }else{
-        customView.frame = alertView.containerView.bounds;
-    }
-    
-    [alertView.containerView addSubview:customView];
-    [alertView p_showWithAnimation];
-
+    dispatch_async(dispatch_get_main_queue(), ^{
+        ICECustomAlertView *alertView = [[ICECustomAlertView alloc] init];
+        
+        if (CGRectGetHeight(customView.bounds) > 0) {
+            
+            CGRect bounds = CGRectMake(0, 0, customView.bounds.size.width + ICE_CornerRadius * 2, customView.bounds.size.height + ICE_CornerRadius * 2);
+            alertView.containerView.bounds = bounds;
+            alertView.containerView.center = ICEScreen_Center;
+            customView.center = CGPointMake(alertView.containerView.bounds.size.width / 2, alertView.containerView.bounds.size.height / 2);
+            
+        }else{
+            customView.frame = alertView.containerView.bounds;
+        }
+        
+        [alertView.containerView addSubview:customView];
+        [alertView p_showWithAnimation];
+    });
 }
 
 
@@ -117,16 +124,20 @@ CGFloat getStringHeight(NSString *string, UIFont *font) {
  *  加载视图
  */
 - (void)p_loadAlertView{
+    
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-retain-cycles"
+    self.retaionBlock = ^(){
+       return  self;
+    };
+#pragma clang diagnostic pop
 
     //获取背景视图
     self.backgroundView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.backgroundView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4f];
     
     UIWindow *topWindow = [UIApplication sharedApplication].keyWindow;
-    
-    objc_setAssociatedObject(topWindow, (__bridge const void *)([self p_getKey]), self,OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    
-    
     [topWindow addSubview:self.backgroundView];
     
     //加载内容视图
@@ -139,13 +150,7 @@ CGFloat getStringHeight(NSString *string, UIFont *font) {
     [self.backgroundView addSubview:self.containerView];
 }
 
-- ( NSString *)p_getKey{
-   //将时间戳做为key值,保证唯一性...
-    NSTimeInterval dis = [[NSDate date] timeIntervalSince1970];
-    NSString* timeStamp=[NSString stringWithFormat:@"key%.0f",dis*1000];
-    _key = timeStamp;
-    return timeStamp;
-}
+
 
 #pragma mark -  show && dismiss animation
 
@@ -314,10 +319,9 @@ CGFloat getStringHeight(NSString *string, UIFont *font) {
     NSInteger index = button.tag - ICEBtn_Tag;
     [self p_dismissWithAnimation:^{
         if (self.completion) {
-            UIWindow *topWindwo = [[UIApplication sharedApplication]keyWindow];
-            objc_setAssociatedObject(topWindwo, (__bridge const void *)(_key), nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
             self.completion(index);
             self.completion = nil;
+            _retaionBlock = nil;
         }
     }];
 }
@@ -398,54 +402,53 @@ CGFloat getStringHeight(NSString *string, UIFont *font) {
 
 
 + (void)alertViewWithTitle:(NSString *)title withMessage:(NSString *)message withButtonTitles:(NSArray *)buttontitles completion:(ICEAlertViewCompletionBlock)completion{
-
-      ICECustomAlertView *alertView = [[ICECustomAlertView alloc] init];
-    if (alertView) {
-        
-         CGFloat y = ICETop_Spacing;
-        //如果标题 不为空
-        if (title && title.length > 0) {
-            UILabel *titleLable = [alertView p_titleLabel:title];
-            CGFloat title_h =  getStringHeight(title, titleLable.font);
-            titleLable.frame = CGRectMake(ICE_Spacing, y, ICEContent_W, title_h);
-            [alertView.containerView addSubview:titleLable];
-            y += title_h;
-        }else{
-            //如果标题为空
+    dispatch_async(dispatch_get_main_queue(), ^{
+        ICECustomAlertView *alertView = [[ICECustomAlertView alloc] init];
+        if (alertView) {
+            
+            CGFloat y = ICETop_Spacing;
+            //如果标题 不为空
+            if (title && title.length > 0) {
+                UILabel *titleLable = [alertView p_titleLabel:title];
+                CGFloat title_h =  getStringHeight(title, titleLable.font);
+                titleLable.frame = CGRectMake(ICE_Spacing, y, ICEContent_W, title_h);
+                [alertView.containerView addSubview:titleLable];
+                y += title_h;
+            }else{
+                //如果标题为空
+            }
+            
+            if (message && message.length > 0) {
+                y += ICE_Spacing;
+                UILabel *titleLable = [alertView p_messageLabel:message];
+                CGFloat title_h =  getStringHeight(message, titleLable.font);
+                titleLable.frame = CGRectMake(ICE_Spacing, y, ICEContent_W, title_h);
+                [alertView.containerView addSubview:titleLable];
+                y += title_h;
+                y += ICE_Spacing;
+                
+            }else if(!title){
+                y += ICE_Spacing;
+            }
+            
+            y += ICE_Spacing ;
+            
+            [alertView p_addLevelLine:CGPointMake(ICEAlertView_W / 2, y)];
+            
+            
+            CGRect bounds = alertView.containerView.bounds;
+            bounds.size.height = y + ICEButton_H +  ICE_Spacing;
+            alertView.containerView.bounds = bounds;
+            alertView.containerView.center = CGPointMake(CGRectGetWidth([UIScreen mainScreen].bounds) / 2, CGRectGetHeight([UIScreen mainScreen].bounds) / 2);
+            
+            
+            [alertView p_initConfigerButtons:buttontitles withY:y];
+            
+            alertView.completion = completion;
+            
+            [alertView p_showWithAnimation];
         }
-        
-        if (message && message.length > 0) {
-            y += ICE_Spacing;
-            UILabel *titleLable = [alertView p_messageLabel:message];
-            CGFloat title_h =  getStringHeight(message, titleLable.font);
-            titleLable.frame = CGRectMake(ICE_Spacing, y, ICEContent_W, title_h);
-            [alertView.containerView addSubview:titleLable];
-            y += title_h;
-            y += ICE_Spacing;
-
-        }else if(!title){
-            y += ICE_Spacing;
-        }
-        
-        y += ICE_Spacing ;
-
-        [alertView p_addLevelLine:CGPointMake(ICEAlertView_W / 2, y)];
-        
-        
-        CGRect bounds = alertView.containerView.bounds;
-        bounds.size.height = y + ICEButton_H +  ICE_Spacing;
-        alertView.containerView.bounds = bounds;
-        alertView.containerView.center = CGPointMake(CGRectGetWidth([UIScreen mainScreen].bounds) / 2, CGRectGetHeight([UIScreen mainScreen].bounds) / 2);
-        
-
-        [alertView p_initConfigerButtons:buttontitles withY:y];
-
-        alertView.completion = completion;
-
-        [alertView p_showWithAnimation];
-    }
-    
-    
+    });
 }
 
 + (void)alertViewWithMessage:(NSString *)message

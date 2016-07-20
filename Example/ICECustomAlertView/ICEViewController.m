@@ -18,19 +18,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [ICECustomAlertView alertViewWithMessage:@"hello Wrold !" withButtonTitles:@[@"取消",@"确定"] completion:^(NSInteger index) {
- 
-        [ICECustomAlertView alertViewWithTitle:@"提示" withMessage:@"hello Wrold !" withButtonTitles:@[@"确定"] completion:^(NSInteger index) {
-            [ICECustomAlertView alertViewWithMessage:@"hello Wrold !" withButtonTitles:@[@"取消"] completion:^(NSInteger index) {
-                
-                [ICECustomAlertView alertViewWithTitle:@"提示" withMessage:@"hello Wrold !" withButtonTitles:nil completion:^(NSInteger index) {
-                    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 150)];
-                    view.backgroundColor = [UIColor redColor];
-                    [ICECustomAlertView alertViewWithCustomView:view];
-                }];
-            }];
-        }];
-    }];
+    
+    
+    
+    
+    
+//    [ICECustomAlertView alertViewWithMessage:@"hello Wrold !" withButtonTitles:@[@"取消",@"确定"] completion:^(NSInteger index) {
+// 
+//        [ICECustomAlertView alertViewWithTitle:@"提示" withMessage:@"hello Wrold !" withButtonTitles:@[@"确定"] completion:^(NSInteger index) {
+//            [ICECustomAlertView alertViewWithMessage:@"hello Wrold !" withButtonTitles:@[@"取消"] completion:^(NSInteger index) {
+//                
+//                
+//            }];
+//        }];
+//    }];
+//    
+//
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    [button setTitle:@"tpa" forState:UIControlStateNormal];
+    button.backgroundColor = [UIColor redColor];
+    [button addTarget:self action:@selector(tap:) forControlEvents:UIControlEventTouchUpInside];
+    
+    button.frame = CGRectMake(100, 100, 100, 100);
+    [self.view addSubview:button];
     
     
     
@@ -51,5 +61,12 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)tap:(UIButton *)sender {
+    
+    [ICECustomAlertView alertViewWithTitle:@"提示" withMessage:@"hello Wrold !" withButtonTitles:nil completion:^(NSInteger index) {
+
+    }];
+
+}
 
 @end

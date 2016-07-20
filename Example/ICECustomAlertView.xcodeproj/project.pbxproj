@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1712430A1D3F678C0095EEFF /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 171243051D3F678C0095EEFF /* .gitkeep */; };
+		1712430B1D3F678C0095EEFF /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 171243071D3F678C0095EEFF /* .gitkeep */; };
+		1712430C1D3F678C0095EEFF /* ICECustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 171243091D3F678C0095EEFF /* ICECustomAlertView.m */; };
 		1755C50C1D14049500C4E632 /* ICEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1755C50B1D14049500C4E632 /* ICEViewController.m */; };
 		5313DEC77FDEAEA4A9479914 /* Pods_ICECustomAlertView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1892AAA58F298A4DFEDACB90 /* Pods_ICECustomAlertView_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -36,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		171243051D3F678C0095EEFF /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		171243071D3F678C0095EEFF /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		171243081D3F678C0095EEFF /* ICECustomAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICECustomAlertView.h; sourceTree = "<group>"; };
+		171243091D3F678C0095EEFF /* ICECustomAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICECustomAlertView.m; sourceTree = "<group>"; };
 		1755C50A1D14049500C4E632 /* ICEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICEViewController.h; sourceTree = "<group>"; };
 		1755C50B1D14049500C4E632 /* ICEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICEViewController.m; sourceTree = "<group>"; };
 		1892AAA58F298A4DFEDACB90 /* Pods_ICECustomAlertView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ICECustomAlertView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,9 +100,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		171243031D3F678C0095EEFF /* ICECustomAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				171243041D3F678C0095EEFF /* Assets */,
+				171243061D3F678C0095EEFF /* Classes */,
+			);
+			name = ICECustomAlertView;
+			path = ../ICECustomAlertView;
+			sourceTree = "<group>";
+		};
+		171243041D3F678C0095EEFF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				171243051D3F678C0095EEFF /* .gitkeep */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		171243061D3F678C0095EEFF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				171243071D3F678C0095EEFF /* .gitkeep */,
+				171243081D3F678C0095EEFF /* ICECustomAlertView.h */,
+				171243091D3F678C0095EEFF /* ICECustomAlertView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				171243031D3F678C0095EEFF /* ICECustomAlertView */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for ICECustomAlertView */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -278,7 +314,9 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				1712430B1D3F678C0095EEFF /* .gitkeep in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				1712430A1D3F678C0095EEFF /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +430,7 @@
 			files = (
 				6003F59E195388D20070C39A /* ICEAppDelegate.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				1712430C1D3F678C0095EEFF /* ICECustomAlertView.m in Sources */,
 				1755C50C1D14049500C4E632 /* ICEViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,6 +555,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ICECustomAlertView/ICECustomAlertView-Prefix.pch";
 				INFOPLIST_FILE = "ICECustomAlertView/ICECustomAlertView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -532,6 +572,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ICECustomAlertView/ICECustomAlertView-Prefix.pch";
 				INFOPLIST_FILE = "ICECustomAlertView/ICECustomAlertView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
