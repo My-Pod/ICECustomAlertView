@@ -63,7 +63,7 @@
 */
 - (IBAction)tap:(UIButton *)sender {
     
-    [ICECustomAlertView alertViewWithTitle:@"提示" withMessage:@"hello Wrold !" withButtonTitles:nil completion:^(NSInteger index) {
+    [ICECustomAlertView alertViewWithTitle:@"提示" withMessage:@"hello Wrold !\nGMX\nI Love You !\nWhat Are You? My Dear....." withButtonTitles:nil completion:^(NSInteger index) {
 
     }];
 

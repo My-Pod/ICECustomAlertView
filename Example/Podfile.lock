@@ -1,5 +1,5 @@
 PODS:
-  - ICECustomAlertView (1.0.0)
+  - ICECustomAlertView (1.0.1)
 
 DEPENDENCIES:
   - ICECustomAlertView (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ICECustomAlertView: 4eb5cf7fe06148d4cd92026370000cf7c543b37f
+  ICECustomAlertView: 0d0955dd8c05268616f1bc5bdb14b668cea3fc1f
 
 PODFILE CHECKSUM: fff86421027f9e4fd5e933bf1f744a3c183d81ac
 

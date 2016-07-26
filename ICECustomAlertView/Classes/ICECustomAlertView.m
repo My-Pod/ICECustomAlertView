@@ -44,9 +44,9 @@ const static CGFloat   ICEFontSize_Btn      = 16; //btn 字体大小
 /**
  *  计算文本高度
  */
-CGFloat getStringHeight(NSString *string, UIFont *font) {
+CGSize getStringSize(NSString *string, UIFont *font) {
     ;
-    return [string boundingRectWithSize:CGSizeMake(ICEAlertView_W, ICEAlertView_H / 3) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : font} context:nil].size.height;
+    return [string boundingRectWithSize:CGSizeMake(ICEAlertView_W, ICEAlertView_H / 3) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : font} context:nil].size;
 }
 
 
@@ -410,7 +410,8 @@ CGFloat getStringHeight(NSString *string, UIFont *font) {
             //如果标题 不为空
             if (title && title.length > 0) {
                 UILabel *titleLable = [alertView p_titleLabel:title];
-                CGFloat title_h =  getStringHeight(title, titleLable.font);
+                CGSize titleSize = getStringSize(title, titleLable.font);
+                CGFloat title_h =  titleSize.height;
                 titleLable.frame = CGRectMake(ICE_Spacing, y, ICEContent_W, title_h);
                 [alertView.containerView addSubview:titleLable];
                 y += title_h;
@@ -420,9 +421,13 @@ CGFloat getStringHeight(NSString *string, UIFont *font) {
             
             if (message && message.length > 0) {
                 y += ICE_Spacing;
+                
                 UILabel *titleLable = [alertView p_messageLabel:message];
-                CGFloat title_h =  getStringHeight(message, titleLable.font);
-                titleLable.frame = CGRectMake(ICE_Spacing, y, ICEContent_W, title_h);
+                CGSize titleSize = getStringSize(message, titleLable.font);
+                CGFloat title_h =  titleSize.height;
+                CGFloat title_w = titleSize.width;
+                titleLable.textAlignment = NSTextAlignmentLeft;
+                titleLable.frame = CGRectMake(ICE_Spacing + (ICEContent_W - title_w) / 2, y, title_w, title_h);
                 [alertView.containerView addSubview:titleLable];
                 y += title_h;
                 y += ICE_Spacing;
